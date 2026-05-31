@@ -1,0 +1,16 @@
+CC = gcc
+CFLAGS = -Wall
+TARGET = app
+OBJS = main.o add.o
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
+
+main.o: main.c add.h
+	$(CC) $(CFLAGS) -c main.c
+
+add.o: add.c add.h
+	$(CC) $(CFLAGS) -c add.c
+
+clean:
+	rm -f $(TARGET) *.o

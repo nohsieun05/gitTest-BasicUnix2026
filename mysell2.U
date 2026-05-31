@@ -1,0 +1,6 @@
+testing='date'
+echo "Current date and time: $testing"
+today='date +%Y-%m-%d'
+echo "Today`s date: $today"
+today='date +%y-%m-%d'
+echo "Today`s date: $today"

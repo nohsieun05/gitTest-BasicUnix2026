@@ -1,0 +1,11 @@
+SRC=$(wildcard*.c)
+OBJ=$(patsubst %.c,%.o,$(SRC))
+echo: $(SRC)
+	echo $^
+	echo $<
+	echo $@
+	echo $(OBJ)
+	echo $(patsubst %.c,%.o,$(SRC))
+
+
+// echo 앞에 @만 넣으면 결과만 보인다
